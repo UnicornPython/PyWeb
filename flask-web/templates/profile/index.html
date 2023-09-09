@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .avatar {
+      border: 3px solid #ccc;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 取传入的模型参数 -->
+  <div class="use-card">
+    <img class="avatar" src={{avatar}} />
+    <div><span>{{username}}<span></div>
+  </div>
+  <!-- 遍历列表 -->
+  <ul>
+    {% for item in hobby %}
+    <li>{{item}}</li>
+    {% endfor %}
+  </ul>
+
+  <!-- 取字典中的数值 -->
+  <div>
+    <span>{{info['birthday']}}</span><br />
+    <span>{{info['luck']}}</span>
+  </div>
+  <hr />
+  <!-- 字典的遍历 -->
+  <ol>
+    {% for k, v in info.items() %}
+    <li>{{k}}❤️{{v}}</li>
+    {%endfor%}
+  </ol>
+</body>
+
+</html>
